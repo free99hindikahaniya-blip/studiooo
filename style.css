@@ -9,25 +9,6 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: white; overflow-x: hidden; }
 
-/* WhatsApp Button (Fixed & Smaller) */
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 50px; /* Size chhota kiya */
-    height: 50px;
-    background-color: #25d366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    z-index: 2000;
-    transition: transform 0.3s ease;
-}
-.whatsapp-float:hover { transform: scale(1.1); }
-.whatsapp-float img { width: 30px; } /* Icon size chhota kiya */
-
 header { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; position: relative; z-index: 1000; }
 .logo { font-size: 1.5rem; font-weight: 700; }
 .logo span { color: var(--primary); }
