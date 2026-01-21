@@ -9,38 +9,31 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: white; overflow-x: hidden; }
 
-/* WhatsApp Button */
+/* WhatsApp Button (Fixed & Smaller) */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    width: 50px; /* Size chhota kiya */
+    height: 50px;
     background-color: #25d366;
-    border-radius: 50px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     z-index: 2000;
+    transition: transform 0.3s ease;
 }
-.whatsapp-float img { width: 35px; }
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float img { width: 30px; } /* Icon size chhota kiya */
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 8%;
-    align-items: center;
-    position: relative;
-    z-index: 1000;
-}
+header { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; position: relative; z-index: 1000; }
 .logo { font-size: 1.5rem; font-weight: 700; }
 .logo span { color: var(--primary); }
 nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
 .btn-call { background: var(--primary); padding: 8px 18px; border-radius: 50px; font-weight: bold; }
 
-/* Hero */
 .hero { display: flex; align-items: center; padding: 60px 8%; min-height: 80vh; position: relative; }
 .hero-text { flex: 1.2; z-index: 10; position: relative; }
 .hero-text h1 { font-size: 3.2rem; line-height: 1.2; margin: 20px 0; }
@@ -51,7 +44,6 @@ nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9re
 .btn-primary { background: white; color: black; }
 .btn-outline { border: 1px solid white; color: white; }
 
-/* Cube Fix */
 .scene { flex: 1; perspective: 1000px; display: flex; justify-content: center; z-index: 1; }
 .cube-container { width: 180px; height: 180px; transform-style: preserve-3d; animation: rotateCube 20s infinite linear; }
 .photo-cube { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; }
@@ -61,7 +53,6 @@ nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9re
     background-size: cover !important; background-position: center !important;
 }
 .face span { background: rgba(0,0,0,0.6); width: 100%; text-align: center; font-size: 0.7rem; padding: 5px 0; }
-
 .front  { transform: translateZ(90px); }
 .back   { transform: rotateY(180deg) translateZ(90px); }
 .right  { transform: rotateY(90deg) translateZ(90px); }
@@ -71,7 +62,6 @@ nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9re
 
 @keyframes rotateCube { from { transform: rotateX(0) rotateY(0); } to { transform: rotateX(360deg) rotateY(360deg); } }
 
-/* Services */
 .services { padding: 40px 8%; z-index: 10; position: relative; }
 .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
 .cat-name { color: var(--primary); margin: 25px 0 15px; font-size: 1.3rem; }
